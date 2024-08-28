@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledRotas = styled.nav `
     display: flex;
-    margin-right: 4rem;
+    margin-left: 7rem;
 `;
 
 export const StyledWrapperMenu = styled.ul `
@@ -18,10 +18,11 @@ export const StyledMenuItem = styled.li `
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0.9rem;
 
     & a {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 `;
 

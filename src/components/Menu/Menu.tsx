@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { BiHome } from "react-icons/bi";
 import { BsPeopleFill } from "react-icons/bs";
+import { BsTelephone } from "react-icons/bs";
 import { StyledMenuItem, StyledRotas, StyledWrapperMenu } from "./Manu.style";
 
 export const Menu = () => {
@@ -18,6 +19,7 @@ export const Menu = () => {
                 </StyledMenuItem>
 
                 <StyledMenuItem>
+                    <BsTelephone />
                     <Link to="/contato">Contato</Link>
                 </StyledMenuItem>
             </StyledWrapperMenu>

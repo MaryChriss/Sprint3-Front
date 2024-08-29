@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Suspense fallback={<><iframe src="https://giphy.com/embed/17mNCcKU1mJlrbXodo" width="480" height="480"></iframe></>}>
+        <Suspense fallback={<>Carregando..</>}>
           <Routes>
             <Route path="/" element={<LazyHome />} />
             <Route path="/equipe" element={<LazyEquipe />} />

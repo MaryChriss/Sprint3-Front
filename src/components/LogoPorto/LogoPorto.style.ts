@@ -10,7 +10,8 @@ export const TitleLogo = styled.h1`
     font-weight: bold;
     color: #00a1fc;
     font-size: 35px;
-    margin-top: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
 `;
 
 export const LogoImage = styled.img`

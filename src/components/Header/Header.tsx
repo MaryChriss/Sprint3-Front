@@ -8,9 +8,12 @@ export const Header =() => {
     return (
         <>
         <StyledHeader>
+
             <LogoPorto />
+
                 <StyledRotas>
                     <StyledWrapperMenu>
+
                         <StyledMenuItem>
                             <BiHome size="1.5rem" color="#00a1fc" />
                             <Link to="/">Home</Link>
@@ -25,13 +28,15 @@ export const Header =() => {
                             <BsTelephone size="1.2rem" color="#00a1fc" />
                             <Link to="/contato">Contato</Link>
                         </StyledMenuItem>
+                        
                     </StyledWrapperMenu>
                 </StyledRotas>
 
                 <StyledLogin>
                     <BiUserCircle size="1.5rem" color="#00a1fc" />
-                    <Link to="/contato" style={{color : "black", fontWeight: 700}}>Login</Link>
+                    <Link to="/login" style={{color : "black", fontWeight: 700}}>Login</Link>
                 </StyledLogin>
+
         </StyledHeader>
         </>
     )

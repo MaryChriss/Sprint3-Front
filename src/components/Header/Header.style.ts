@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 4rem;
     background-color: #fbfbfb;
 `
 
 export const StyledRotas = styled.nav `
     display: flex;
-    margin-left: 7rem;
+    margin-right: 5rem;
 `;
 
 export const StyledWrapperMenu = styled.ul `
@@ -22,6 +23,7 @@ export const StyledWrapperMenu = styled.ul `
 export const StyledMenuItem = styled.li `
     width: 5rem;
     height: 4rem;
+    margin-left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,4 +35,5 @@ export const StyledLogin = styled.div `
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin-right: 20px;
 `

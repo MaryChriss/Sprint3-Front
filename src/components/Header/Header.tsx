@@ -1,7 +1,6 @@
 import { BiGroup, BiHome, BiUserCircle } from "react-icons/bi"
 import { LogoPorto } from "../LogoPorto/LogoPorto"
-import { StyledHeader, StyledLogin, StyledMenuItem, StyledRotas, StyledWrapperMenu } from "./Header.style"
-import { Link } from "react-router-dom"
+import { StyledHeader, StyledLink, StyledLogin, StyledMenuItem, StyledRotas, StyledWrapperMenu } from "./Header.style"
 import { BsTelephone } from "react-icons/bs"
 
 export const Header =() => {
@@ -16,17 +15,17 @@ export const Header =() => {
 
                         <StyledMenuItem>
                             <BiHome size="1.5rem" color="#00a1fc" />
-                            <Link to="/">Home</Link>
+                            <StyledLink to="/">Home</StyledLink>
                         </StyledMenuItem>
 
                         <StyledMenuItem>
                             <BiGroup size="1.5rem" color="#00a1fc" />
-                            <Link to="/equipe">Equipe</Link>
+                            <StyledLink to="/equipe">Equipe</StyledLink>
                         </StyledMenuItem>
 
                         <StyledMenuItem>
                             <BsTelephone size="1.2rem" color="#00a1fc" />
-                            <Link to="/contato">Contato</Link>
+                            <StyledLink to="/contato">Contato</StyledLink>
                         </StyledMenuItem>
                         
                     </StyledWrapperMenu>
@@ -34,7 +33,7 @@ export const Header =() => {
 
                 <StyledLogin>
                     <BiUserCircle size="1.5rem" color="#00a1fc" />
-                    <Link to="/login" style={{color : "black", fontWeight: 700}}>Login</Link>
+                    <StyledLink to="/login">Login</StyledLink>
                 </StyledLogin>
 
         </StyledHeader>

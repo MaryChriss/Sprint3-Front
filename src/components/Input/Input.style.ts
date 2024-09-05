@@ -16,8 +16,8 @@ export const StyledLabel = styled.label`
 export const StyledInputField = styled.input`
     width: 23rem;
     border-radius: 5rem;
-    color: black;
-    font-size: 1.3rem;
+    border: black 1px solid;
+    font-size: 1rem;
     padding: 0.3rem;
 
     &:focus {
@@ -28,10 +28,10 @@ export const StyledInputField = styled.input`
 
 export const StyledTextArea = styled.textarea`
     width: 23rem;
-    height: 12.5rem;
+    height: 15.5rem;
     border-radius: 2rem;
     color: black;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 0.5rem;
 
     &:focus {

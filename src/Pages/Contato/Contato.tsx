@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout/Layout";
 import { useState } from "react";
 import Input from "../../components/Input/Input";
-import { StyledContato } from "./Contato.style";
+import { StyledBotao, StyledContato, Styledforms, StyledformSection, StyledInfosPessoais, StyledQuestions, StyledTextQuestions } from "./Contato.style";
 
 export default function Contato() {
     const [formData, setFormData] = useState({
@@ -31,10 +31,10 @@ export default function Contato() {
     return (
         <Layout>
             <StyledContato>
-                <div className="questions">
+                <StyledQuestions>
                     <img src="/public/carroFuturista.png" alt="Carro Futurista" />
 
-                    <div className="textQuestions">
+                    <StyledTextQuestions>
                         <h1>Dúvidas?</h1>
                         <p>
                             Estamos aqui para ajudar com qualquer dúvida <br />
@@ -42,14 +42,17 @@ export default function Contato() {
                             Preencha o formulário abaixo e nossa equipe entrará <br />
                             em contato com você o mais breve possível.
                         </p>
-                    </div>
-                </div>
+                    </StyledTextQuestions>
+                </StyledQuestions>
 
-                <div className="conteudo-forms">
-                    <div className="forms">
+                <div>
+
+                    <Styledforms>
                         <form onSubmit={handleSubmit}>
-                            <div className="form-sections">
-                                <div className="infos-pessoais">
+
+                            <StyledformSection>
+                                <StyledInfosPessoais>
+
                                     <Input
                                         label="Nome*:"
                                         type="text"
@@ -75,9 +78,8 @@ export default function Contato() {
                                         value={formData.telefone}
                                         onChange={handleInputChange}
                                     />
-                                </div>
+                                </StyledInfosPessoais>
 
-                                <div className="mensagem">
                                     <Input
                                         label="Mensagem*:"
                                         type="text"
@@ -85,16 +87,15 @@ export default function Contato() {
                                         value={formData.mensagem}
                                         onChange={handleInputChange}
                                         required
-                                        textarea={true} // Define que será um textarea
+                                        textarea={true}
                                     />
-                                </div>
-                            </div>
+                            </StyledformSection>
 
-                            <div className="botao">
+                            <StyledBotao>
                                 <button type="submit" className="btn">Enviar</button>
-                            </div>
+                            </StyledBotao>
                         </form>
-                    </div>
+                    </Styledforms>
                 </div>
             </StyledContato>
         </Layout>

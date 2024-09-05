@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
@@ -37,3 +38,12 @@ export const StyledLogin = styled.div `
     flex-direction: row;
     margin-right: 20px;
 `
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+
+    &:hover {
+        color: #00a1fc;
+    }
+`;

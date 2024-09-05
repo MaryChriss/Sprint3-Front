@@ -1,8 +1,9 @@
 import { Layout } from "../../components/Layout/Layout";
 import { useState } from "react";
+import Input from "../../components/Input/Input";
+import { StyledContato } from "./Contato.style";
 
 export default function Contato() {
-
     const [formData, setFormData] = useState({
         nome: '',
         email: '',
@@ -29,9 +30,9 @@ export default function Contato() {
 
     return (
         <Layout>
-            <section className="contato">
+            <StyledContato>
                 <div className="questions">
-                    <img src="/img/carroFuturista.png" alt="Carro Futurista" />
+                    <img src="/public/carroFuturista.png" alt="Carro Futurista" />
 
                     <div className="textQuestions">
                         <h1>Dúvidas?</h1>
@@ -45,61 +46,47 @@ export default function Contato() {
                 </div>
 
                 <div className="conteudo-forms">
-
                     <div className="forms">
                         <form onSubmit={handleSubmit}>
-
                             <div className="form-sections">
                                 <div className="infos-pessoais">
+                                    <Input
+                                        label="Nome*:"
+                                        type="text"
+                                        name="nome"
+                                        value={formData.nome}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
 
-                                    <div className="campo">
-                                        <label htmlFor="nome">Nome*:</label>
-                                        <input
-                                            type="text"
-                                            id="nome"
-                                            name="nome"
-                                            value={formData.nome}
-                                            onChange={handleInputChange}
-                                            required
-                                        />
-                                    </div>
+                                    <Input
+                                        label="Email*:"
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
 
-                                    <div className="campo">
-                                        <label htmlFor="email">Email*:</label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            required
-                                        />
-                                    </div>
-
-                                    <div className="campo">
-                                        <label htmlFor="telefone">Telefone:</label>
-                                        <input
-                                            type="tel"
-                                            id="telefone"
-                                            name="telefone"
-                                            value={formData.telefone}
-                                            onChange={handleInputChange}
-                                        />
-                                    </div>
-                                    
+                                    <Input
+                                        label="Telefone:"
+                                        type="tel"
+                                        name="telefone"
+                                        value={formData.telefone}
+                                        onChange={handleInputChange}
+                                    />
                                 </div>
 
                                 <div className="mensagem">
-                                    <div>
-                                        <label htmlFor="mensagem">Mensagem*:</label>
-                                        <textarea
-                                            id="mensagem"
-                                            name="mensagem"
-                                            value={formData.mensagem}
-                                            onChange={handleInputChange}
-                                            required
-                                        ></textarea>
-                                    </div>
+                                    <Input
+                                        label="Mensagem*:"
+                                        type="text"
+                                        name="mensagem"
+                                        value={formData.mensagem}
+                                        onChange={handleInputChange}
+                                        required
+                                        textarea={true} // Define que será um textarea
+                                    />
                                 </div>
                             </div>
 
@@ -109,7 +96,7 @@ export default function Contato() {
                         </form>
                     </div>
                 </div>
-            </section>
+            </StyledContato>
         </Layout>
     );
 }

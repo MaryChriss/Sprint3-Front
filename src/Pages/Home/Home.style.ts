@@ -16,6 +16,10 @@ export const StyledDescription = styled.div`
     @media (min-width: 600px) and (max-width:999px){
         display: flex;
     }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        margin-left: 3rem;
+    }
 `
 
 export const StyledText = styled.div`
@@ -60,6 +64,7 @@ export const StyledText = styled.div`
         flex-direction: column;
         margin-left: 2rem;
         margin-top: 5rem;
+        margin-right: 5rem;
         
         h1 {
             font-size: 18px;
@@ -71,6 +76,25 @@ export const StyledText = styled.div`
             font-size: 15px;
             margin-top: 1rem;
         }
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        display: flex;
+        flex-direction: column;
+        margin-left: 5rem;
+        margin-top: 5rem;
+
+        h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0.5rem;
+        font-size: 17px;
+        margin-top: 1rem;
+    }
     }
 `
 
@@ -88,7 +112,7 @@ export const StyledImgPrinc = styled.div`
 
         img.fundo {
             margin-top: 2rem;
-            margin-left: 10rem;
+            margin-left: 5rem;
             margin-right: 2rem;
             height: 17rem;
             width: 17rem;
@@ -96,7 +120,7 @@ export const StyledImgPrinc = styled.div`
 
         img.decoration1 {
             position: absolute;
-            margin-left: 23.5rem;
+            margin-left: 19rem;
             width: 6rem;
             height: 6rem;
         }
@@ -107,17 +131,35 @@ export const StyledImgPrinc = styled.div`
         img.fundo {
             margin-top: 2rem;
             margin-left: 0rem;
-            margin-right: 4rem;
+            margin-right: 0rem;
             height: 17rem;
             width: 17rem;
         }
 
         img.decoration1 {
             position: absolute;
-            margin-left: 14rem;
+            margin-left: 13rem;
             width: 6rem;
             height: 6rem;
         }
+
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        .fundo {
+            margin-top: 2rem;
+            margin-left: 3rem;
+            margin-right: 2rem;
+            height: 22rem;
+            width: 22rem;
+    }
+
+    img.decoration1 {
+        position: absolute;
+        margin-left: 21rem;
+        width: 6rem;
+        height: 6rem;
+    }
     }
 `
 
@@ -132,13 +174,19 @@ export const StyledSub = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 5rem;
-        margin-right: 4rem;
-        margin-left: 2rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
         margin-bottom: 2rem;
+        font-size: 1rem;
     }}
 
     @media (min-width: 600px) and (max-width:999px){
         margin-top: 8rem;
+        margin-left: 4rem;
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        margin-top: 5rem;
         margin-left: 4rem;
     }
 `
@@ -178,6 +226,18 @@ export const StyledStepByStep = styled.article`
         justify-content: center;
         align-items: center;
     }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        height: 50rem;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        box-sizing: border-box;
+        border-radius: 6rem;
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const StyledStepsContainer = styled.div`
@@ -202,6 +262,21 @@ export const StyledStepsContainer = styled.div`
         min-width: 300px;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        display: flex;
+        max-width: 100%;
+        max-height: 400px;
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
     }
 `
 
@@ -228,6 +303,12 @@ export const StyledFirstStep = styled.div`
             display: flex;
             flex-direction: row;
             gap: 3rem;
+        }
+
+        @media (min-width: 1000px) and (max-width:1399px){
+            margin-left: 9rem;
+            display: flex;
+            flex-direction: row;
         }
 `
 
@@ -284,6 +365,22 @@ export const StyledSteps = styled.div`
             font-size: 16px;
         }
     }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        text-align: center;
+        margin-top: 2rem;
+        margin-right: 5rem;
+        justify-content: center;
+
+        h3 {
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            width: 15rem;
+        }
+    }
 `
 
 export const StyledSecondStep = styled.div`
@@ -309,6 +406,12 @@ export const StyledSecondStep = styled.div`
             display: flex;
             flex-direction: row;
             gap: 3rem;
+        }
+
+        @media (min-width: 1000px) and (max-width:1399px){
+            display: flex;
+            flex-direction: row;
+            margin-left: 7rem;
         }
 `
 
@@ -338,6 +441,16 @@ export const StyledThirdStep = styled.div`
 
         h3{
             margin-bottom: 1rem;
+        }
+    }
+
+    @media (min-width: 1000px) and (max-width:1399px){
+        display: flex;
+        flex-direction: row;
+        margin-left: 8rem;
+
+        h3{
+            margin-bottom: 0;
         }
     }
 `

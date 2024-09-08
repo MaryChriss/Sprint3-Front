@@ -11,7 +11,8 @@ export const StyledDescription = styled.div`
 export const StyledText = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 17rem;
+    margin-left: 15rem;
+    margin-right: 10rem;
     margin-top: 7rem;
 
     & h1 {

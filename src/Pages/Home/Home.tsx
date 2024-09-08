@@ -25,7 +25,7 @@ export default function Home() {
 
                     <StyledImgPrinc>
                         <img className="decoration1" src="/public/BolinhasDeco.png" alt="imagem com bolinhas" />
-                        <img src="/public/InteligenciaArt.png" alt="robo representando IA" />
+                        <img className="fundo" src="/public/InteligenciaArt.png" alt="robo representando IA" />
                     </StyledImgPrinc>
 
                 </StyledDescription>

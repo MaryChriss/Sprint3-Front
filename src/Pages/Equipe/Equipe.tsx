@@ -29,7 +29,9 @@ export default function Equipe() {
 
                 <StyledColaborador>
                     <img src="/public/mariFoto.jpg" alt="" className="imagem" />
-                    <p>Mariana Christina</p>
+                    <p>Mariana Christina <br/>
+                        RM: 554773
+                    </p>
                     <StyledRedes>
                     <BotaoRedeSocial
                         Icone={BiLogoGithub}
@@ -47,7 +49,9 @@ export default function Equipe() {
 
                 <StyledColaborador>
                     <img src="/public/henriqueFoto.png" alt="" className="imagem" />
-                    <p>Henrique Maciel</p>
+                    <p>Henrique Maciel <br/>
+                        RM: 556480
+                    </p>
                     <StyledRedes>
                     <BotaoRedeSocial
                         Icone={BiLogoGithub}
@@ -64,7 +68,9 @@ export default function Equipe() {
 
                 <StyledColaborador>
                     <img src="/public/gabiFoto.jpg" alt="" className="imagem" />
-                    <p>Gabriela Moguinho</p>
+                    <p>Gabriela Moguinho <br/>
+                        RM: 556143
+                    </p>
                     <StyledRedes>
                     <BotaoRedeSocial
                         Icone={BiLogoGithub}

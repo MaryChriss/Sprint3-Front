@@ -7,6 +7,7 @@ export const StyledHeader = styled.div`
     justify-content: space-between;
     height: 4rem;
     background-color: #fbfbfb;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 `
 
 export const StyledRotas = styled.nav `

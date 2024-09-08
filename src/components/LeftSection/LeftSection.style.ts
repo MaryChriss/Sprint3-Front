@@ -10,7 +10,7 @@ export const StyledLeftSectionContainer = styled.div`
     margin-left: 4rem;
     margin-top: 4rem;
     margin-right: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8.5rem;
     border-radius: 2rem;
 
     & p {

@@ -65,6 +65,9 @@ Após preencher os campos, o usuário pode enviar sua mensagem utilizando o bot�
 ## Como Rodar o Projeto Localmente
 
 1. Clone o repositório:
+   ´´´
    git clone https://github.com/MaryChriss/Sprint3-Front.git 
+3. 
+   
 
    

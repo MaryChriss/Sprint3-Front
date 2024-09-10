@@ -7,11 +7,16 @@ export const StyledHeader = styled.div`
     justify-content: space-between;
     height: 4rem;
     background-color: #fbfbfb;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 `
 
 export const StyledRotas = styled.nav `
     display: flex;
     margin-right: 5rem;
+
+    @media(max-width: 599px) {
+        margin-right: 1rem;
+    }
 `;
 
 export const StyledWrapperMenu = styled.ul `
@@ -37,6 +42,7 @@ export const StyledLogin = styled.div `
     align-items: center;
     flex-direction: row;
     margin-right: 20px;
+
 `
 export const StyledLink = styled(Link)`
     text-decoration: none;
@@ -45,5 +51,12 @@ export const StyledLink = styled(Link)`
 
     &:hover {
         color: #00a1fc;
+    }
+
+    @media(max-width: 599px) {
+        
+        a {
+            font-size: 10px;
+        }
     }
 `;

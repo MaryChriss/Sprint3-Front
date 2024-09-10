@@ -13,10 +13,12 @@ export const StyledDescription = styled.div`
         flex-direction: column;
     }
 
+    /* Tablet */
     @media (min-width: 600px) and (max-width:999px){
         display: flex;
     }
 
+    /* Desktop */
     @media (min-width: 1000px) and (max-width:1399px){
         margin-left: 3rem;
     }

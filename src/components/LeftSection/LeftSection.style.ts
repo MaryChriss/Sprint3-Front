@@ -26,6 +26,15 @@ export const StyledLeftSectionContainer = styled.div`
             margin-bottom: 2rem;
         }
     }
+
+    @media (min-width: 600px) and (max-width:999px){
+        flex-direction:column;
+
+        p {
+            font-size: 20px;
+            margin-bottom: 2rem;
+        }
+    }
 `;
 
 export const StyledTitulo = styled.div`
@@ -37,5 +46,9 @@ export const StyledTitulo = styled.div`
     @media(max-width: 599px) {
         margin-left: 0rem;
         font-size: 20px;
+        }
+
+        @media (min-width: 600px) and (max-width:999px){
+            font-size: 26px;
         }
 `

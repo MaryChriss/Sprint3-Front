@@ -19,4 +19,9 @@ export const StyledContentBox = styled.div`
         width: 15rem;
         height: 29rem;
     }
+
+    @media (min-width: 600px) and (max-width:999px){
+        margin-bottom: 1.5rem;
+        width: 28rem;
+    }
 `;

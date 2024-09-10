@@ -115,6 +115,11 @@ export const StyledColaborador = styled.div`
         border: white 5px solid;
     }
 
+    @media (min-width: 600px) and (max-width:999px){
+        .imagem {
+            margin-top: -2rem;
+        }
+        }
 `
 
 export const StyledRedes = styled.div`

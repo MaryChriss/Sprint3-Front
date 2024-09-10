@@ -28,6 +28,17 @@ export const StyledQuestions = styled.div`
             margin-top: 2rem;
         }
         }
+
+        @media (min-width: 600px) and (max-width:999px){
+
+            img {
+                margin-right: 1rem;
+                margin-left: 1rem;
+                height: 12rem;
+                width: 20rem;
+                margin-top: 4rem;
+            }
+        }
 `
 
 export const StyledTextQuestions = styled.div`
@@ -57,6 +68,18 @@ export const StyledTextQuestions = styled.div`
             margin-top: 1rem;
         }
     }
+
+    @media (min-width: 600px) and (max-width:999px){
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
 `
 
 export const Styledforms = styled.div`
@@ -70,6 +93,11 @@ export const StyledformSection = styled.div`
     gap: 5rem;
 
     @media(max-width: 599px) {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    @media (min-width: 600px) and (max-width:999px){
         flex-direction: column;
         margin-top: 1rem;
     }

@@ -8,9 +8,9 @@ export const StyledLeftSectionContainer = styled.div`
     align-items: center;
     font-size: 1.2rem;
     margin-left: 4rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-right: 4rem;
-    margin-bottom: 8.5rem;
+    margin-bottom: 4rem;
     border-radius: 2rem;
 
     & p {

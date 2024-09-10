@@ -27,6 +27,13 @@ export const StyledDetails2 = styled.div`
             margin-left: 0;
         }
     }
+
+    @media (min-width: 600px) and (max-width:999px){
+
+        & img {
+            margin-left: 0;
+        }
+    }
 `
 
 export const StyledContext = styled.div`
@@ -60,6 +67,21 @@ export const StyledContext = styled.div`
             margin-left: -2rem;
         }
         }
+
+    @media (min-width: 600px) and (max-width:999px){
+        margin-right: 1.5rem;
+
+        & h1 {
+            font-size: 2rem;
+            margin-left: -3rem;
+        }
+
+        & p {
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-left: -3rem;
+        }
+    }
 `
 
 export const StyledColaboradores = styled.div`
@@ -68,6 +90,12 @@ export const StyledColaboradores = styled.div`
     gap: 5rem;
 
         @media(max-width: 599px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: -4rem;
+        }
+
+        @media (min-width: 600px) and (max-width:999px){
             display: flex;
             flex-direction: column;
             margin-top: -4rem;
@@ -86,6 +114,7 @@ export const StyledColaborador = styled.div`
         border-radius: 10rem;
         border: white 5px solid;
     }
+
 `
 
 export const StyledRedes = styled.div`

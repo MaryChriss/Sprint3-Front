@@ -8,13 +8,23 @@ export const StyledLeftSectionContainer = styled.div`
     align-items: center;
     font-size: 1.2rem;
     margin-left: 4rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-right: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 12.4rem;
     border-radius: 2rem;
 
     & p {
         margin-left: 4rem;
+    }
+
+    @media(max-width: 599px) {
+        flex-direction:column;
+
+        p {
+            margin-left: 0;
+            font-size: 15px;
+            margin-bottom: 2rem;
+        }
     }
 `;
 
@@ -23,4 +33,9 @@ export const StyledTitulo = styled.div`
     font-weight: 800;
     font-size: 28px;
     margin-bottom: 2rem;
+
+    @media(max-width: 599px) {
+        margin-left: 0rem;
+        font-size: 20px;
+        }
 `

@@ -68,6 +68,10 @@ export const Button = styled.button`
     @media(max-width: 599px) {
         margin-left: 2.5rem;
     }
+
+    @media (min-width: 600px) and (max-width:999px){
+        margin-left: 6rem;
+    }
 `;
 
 export const SwitchLink = styled.a`

@@ -62,10 +62,20 @@ Após preencher os campos, o usuário pode enviar sua mensagem utilizando o bot�
   - [GitHub](https://github.com/GabrielaMoguinho)
   - [LinkedIn](https://www.linkedin.com/in/GabrielaMoguinho)
 
-## Como Rodar o Projeto Localmente
+## Como rodar o projeto localmente
 
-1. Clone o repositório:
+1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/MaryChriss/Sprint3-Front.git  ```
+   git clone https://github.com/MaryChriss/Sprint3-Front.git 
 
-   
+2. **Entre no diretório do projeto:**
+   ```bash
+   cd nome-repositorio
+
+3. **Instale as dependências do projeto:**
+   ```bash
+   npm install
+
+4.  **Execute o projeto:**
+   ```bash
+   npm run dev

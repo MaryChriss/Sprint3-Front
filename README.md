@@ -70,7 +70,7 @@ Após preencher os campos, o usuário pode enviar sua mensagem utilizando o bot�
 
 2. **Entre no diretório do projeto:**
    ```bash
-   cd nome-repositorio
+   cd sprint3-front
 
 3. **Instale as dependências do projeto:**
    ```bash
@@ -78,4 +78,4 @@ Após preencher os campos, o usuário pode enviar sua mensagem utilizando o bot�
 
 4.  **Execute o projeto:**
    ```bash
-   npm run dev
+    npm run dev

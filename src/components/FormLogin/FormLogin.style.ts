@@ -13,6 +13,11 @@ export const Styledh1 = styled.h1`
     margin-bottom: 5rem;
     font-size: 2rem;
     margin-top: 2rem;
+
+    @media(max-width: 599px) {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
 `
 
 export const InputIcon = styled.span`
@@ -22,6 +27,10 @@ export const InputIcon = styled.span`
     transform: translateY(-60%);
     font-size: 1.5rem;
     color: #aaa;
+
+    @media(max-width: 599px) {
+        left: 6px;
+    }
 `;
 
 export const Input = styled.input`
@@ -38,6 +47,10 @@ export const Input = styled.input`
         border-color: #007BFF;
         outline: none;
     }
+
+    @media(max-width: 599px) {
+        padding: 0.5rem;
+    }
 `;
 
 
@@ -51,6 +64,10 @@ export const Button = styled.button`
     cursor: pointer;
     font-size: 1rem;
     margin-left: 8rem;
+
+    @media(max-width: 599px) {
+        margin-left: 2.5rem;
+    }
 `;
 
 export const SwitchLink = styled.a`
@@ -62,6 +79,11 @@ export const SwitchLink = styled.a`
     color: #007BFF;
     text-decoration: underline;
     margin-top: 2rem;
+
+    @media(max-width: 599px) {
+        font-size: 0.9rem;
+        margin-top: 2rem;
+    }
 `;
 
 export const Title = styled.h2`

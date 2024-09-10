@@ -28,7 +28,7 @@ interface FormLoginProps {
             </InputIcon>
             <Input
                 type="text"
-                placeholder="CPF"
+                placeholder="     CPF"
                 value={cpf}
                 onChange={(e) => setCpf(e.target.value)}
             />
@@ -40,7 +40,7 @@ interface FormLoginProps {
             </InputIcon>
             <Input
                 type="password"
-                placeholder="Senha"
+                placeholder="      Senha"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />

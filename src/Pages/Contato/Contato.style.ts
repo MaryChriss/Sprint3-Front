@@ -15,6 +15,19 @@ export const StyledQuestions = styled.div`
         width: 30rem;
         margin-top: 4rem;
     }
+
+        /* Mobile */
+        @media(max-width: 599px) {
+            display: flex;
+            flex-direction: column-reverse;
+
+        img {
+            margin-right: 0rem;
+            height: 15rem;
+            width: 23rem;
+            margin-top: 2rem;
+        }
+        }
 `
 
 export const StyledTextQuestions = styled.div`
@@ -30,6 +43,20 @@ export const StyledTextQuestions = styled.div`
         font-size: 1.2rem;
         margin-top: 1rem;
     }
+
+    @media(max-width: 599px) {
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+    }
 `
 
 export const Styledforms = styled.div`
@@ -41,11 +68,17 @@ export const StyledformSection = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 5rem;
+
+    @media(max-width: 599px) {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
 `
 
 export const StyledInfosPessoais = styled.div`
     display: flex;
     flex-direction: column;
+
 `
 
 export const StyledBotao = styled.div`

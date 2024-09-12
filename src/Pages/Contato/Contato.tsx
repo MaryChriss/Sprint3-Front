@@ -19,13 +19,38 @@ export default function Contato() {
         });
     };
 
-    const validarFormulario = () => {
-        alert("Mensagem enviada com sucesso");
-    };
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        validarFormulario();
+
+        try {
+            const response = await fetch('https://formspree.io/f/mgvwbonj', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.nome,
+                    email: formData.email,
+                    phone: formData.telefone,
+                    message: formData.mensagem
+                })
+            });
+
+            if (response.ok) {
+                alert('Mensagem enviada com sucesso!');
+                setFormData({
+                    nome: '',
+                    email: '',
+                    telefone: '',
+                    mensagem: ''
+                });
+            } else {
+                alert('Erro ao enviar a mensagem. Por favor, tente novamente.'); // Alerta para erro de resposta
+            }
+        } catch (error) {
+            console.error("Erro:", error); // Log do erro no console
+            alert('Erro ao enviar a mensagem. Verifique sua conexão e tente novamente.'); // Alerta de erro
+        }
     };
 
     return (
@@ -46,13 +71,10 @@ export default function Contato() {
                 </StyledQuestions>
 
                 <div>
-
                     <Styledforms>
                         <form onSubmit={handleSubmit}>
-
                             <StyledformSection>
                                 <StyledInfosPessoais>
-
                                     <Input
                                         label="Nome*:"
                                         type="text"
@@ -80,15 +102,15 @@ export default function Contato() {
                                     />
                                 </StyledInfosPessoais>
 
-                                    <Input
-                                        label="Mensagem*:"
-                                        type="text"
-                                        name="mensagem"
-                                        value={formData.mensagem}
-                                        onChange={handleInputChange}
-                                        required
-                                        textarea={true}
-                                    />
+                                <Input
+                                    label="Mensagem*:"
+                                    type="text"
+                                    name="mensagem"
+                                    value={formData.mensagem}
+                                    onChange={handleInputChange}
+                                    required
+                                    textarea={true}
+                                />
                             </StyledformSection>
 
                             <StyledBotao>

@@ -17,6 +17,7 @@ Este projeto é um sistema web de diagnóstico automotivo utilizando inteligênc
 - **React-Icons** Biblioteca de ícones.
 - **React-Router-Dom** Gerenciamento de rotas e navegação.
 - **Inteligência Artificial** para o processo de diagnóstico (Watson Assistent).
+- **Formspree** API publica para o formulario ser enviado para o email da equipe
 
 ## Como Utilizar o Sistema
 

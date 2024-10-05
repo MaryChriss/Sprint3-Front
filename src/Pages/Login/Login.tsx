@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
-import LeftSection from "../../components/LeftSection/LeftSection";
-import { StyledName } from "./Login.style";
-
+import RightSection from "../../components/RightSection/RightSection";
+import { StyledLeftSectionContainer, StyledName, StyledTitulo } from "./Login.style";
 
 const App: React.FC = () => {
     const navigate = useNavigate();
@@ -15,7 +14,21 @@ const App: React.FC = () => {
     return (
         <>
             <StyledName onClick={handleClick}>Brain Drive</StyledName>
-            <LeftSection />
+            <StyledLeftSectionContainer>
+                <div>
+                    <StyledTitulo>Bem-vindo ao Brain Drive! <br />
+                        Seu assistente virtual para <br />
+                        diagnóstico automotivo.
+                    </StyledTitulo>
+                    <p>
+                        Descubra problemas no seu veículo com facilidade e siga as <br />
+                        recomendações para mantê-lo em perfeito estado. Faça login <br />
+                        para começar!
+                    </p>
+                </div>
+
+                <RightSection />
+            </StyledLeftSectionContainer>
             <Footer />
         </>
     );

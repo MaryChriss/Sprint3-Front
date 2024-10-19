@@ -2,6 +2,7 @@ import { BiGroup, BiHome, BiUserCircle } from "react-icons/bi"
 import { LogoPorto } from "../LogoPorto/LogoPorto"
 import { StyledHeader, StyledLink, StyledLogin, StyledMenuItem, StyledRotas, StyledWrapperMenu } from "./Header.style"
 import { BsTelephone } from "react-icons/bs"
+import { LuUserSquare2 } from "react-icons/lu"
 
 export const Header =() => {
     return (
@@ -26,6 +27,11 @@ export const Header =() => {
                         <StyledMenuItem>
                             <BsTelephone size="1.2rem" color="#00a1fc" />
                             <StyledLink to="/contato">Contato</StyledLink>
+                        </StyledMenuItem>
+
+                        <StyledMenuItem>
+                            <LuUserSquare2 size="1.5rem" color="#00a1fc" />
+                            <StyledLink to="/perfil">Perfil</StyledLink>
                         </StyledMenuItem>
                         
                     </StyledWrapperMenu>

@@ -5,6 +5,7 @@ const LazyHome = lazy(() => import("./Pages/Home/Home"));
 const LazyEquipe = lazy(() => import('./Pages/Equipe/Equipe'));
 const LazyContato = lazy(() => import('./Pages/Contato/Contato'));
 const LazyLogin = lazy(() => import("./Pages/Login/Login"))
+const LazyPerfil = lazy(() => import("./Pages/Perfil/Perfil"))
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/equipe" element={<LazyEquipe />} />
             <Route path="/contato" element={<LazyContato />} />
             <Route path="/login" element={<LazyLogin />} />
+            <Route path="/perfil" element={<LazyPerfil />} />
           </Routes>
         </Suspense>
     </BrowserRouter>

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { FaCar } from "react-icons/fa"; // Ícone de carro importado corretamente
+import { FaCar, FaTimes } from "react-icons/fa"; // Ícones de carro e X importados
 import { Button } from "../../components/FormLogin/FormLogin.style";
 import { Layout } from "../../components/Layout/Layout";
-import { StyledCar, StyledContainer, StyledConteudo, StyledInfosUser, StyledInputs } from "./Perfil.style";
-import Input from "../../components/Input/Input";
+import { StyledCar, StyledContainer, StyledConteudo, StyledInfosUser } from "./Perfil.style";
 
 export default function Perfil() {
     const [vehicles, setVehicles] = useState([]);
@@ -22,48 +21,55 @@ export default function Perfil() {
         }
     };
 
+    const handleRemoveVehicle = (indexToRemove) => {
+        // Filtra a lista de veículos para remover o veículo no índice fornecido
+        const updatedVehicles = vehicles.filter((_, index) => index !== indexToRemove);
+        setVehicles(updatedVehicles); // Atualiza a lista de veículos
+    };
+
     return (
         <Layout>
             <StyledContainer>
                 <StyledConteudo>
-
                     <StyledInfosUser>
-                        <img src="../../../public/user.png" alt="" className="image" />
-
+                        <img src="../../../public/user.png" alt="Usuário" className="image" />
                         <div>
                             <h1 className="h1fi">Fulano de tal tal e tal</h1>
-                            <p>Cpf: xxx.xxx.xxx-xx</p>
+                            <p>E-mail:</p>
                         </div>
                     </StyledInfosUser>
 
-
                     <div>
+                        <h3>Veículos:</h3>
                         <div>
-                            <h3>Veículos:</h3>
-                            <div>
-                                <input
-                                    className="inputcar"
-                                    type="text"
-                                    placeholder="Modelo"
-                                    value={model}
-                                    onChange={(e) => setModel(e.target.value)}   />
-                                <input
-                                    className="inputcar"
-                                    type="text"
-                                    placeholder="Marca"
-                                    value={brand}
-                                    onChange={(e) => setBrand(e.target.value)}    />
-                                <input
-                                    className="inputcar"
-                                    type="text"
-                                    placeholder="Ano"
-                                    value={year}
-                                    onChange={(e) => setYear(e.target.value)}  />
-                            </div>
-                            <Button onClick={handleAddVehicle} style={{ marginTop: '2rem', marginLeft: "10rem", marginBottom:"2rem" }}>
-                                Adicionar
-                            </Button>
+                            <input
+                                className="inputcar"
+                                type="text"
+                                placeholder="Modelo"
+                                value={model}
+                                onChange={(e) => setModel(e.target.value)}
+                            />
+                            <input
+                                className="inputcar"
+                                type="text"
+                                placeholder="Marca"
+                                value={brand}
+                                onChange={(e) => setBrand(e.target.value)}
+                            />
+                            <input
+                                className="inputcar"
+                                type="text"
+                                placeholder="Ano"
+                                value={year}
+                                onChange={(e) => setYear(e.target.value)}
+                            />
                         </div>
+                        <Button
+                            onClick={handleAddVehicle}
+                            style={{ marginTop: '2rem', marginLeft: "10rem", marginBottom: "2rem" }}
+                        >
+                            Adicionar
+                        </Button>
                     </div>
 
                     <StyledCar>
@@ -75,8 +81,17 @@ export default function Perfil() {
                                     <p><strong>Ano:</strong> {vehicle.year}</p>
                                 </div>
 
-                                <div>
+                                <div className="icons">
                                     <FaCar style={{ fontSize: '3rem', color: '#007bff', marginLeft: "3rem" }} />
+                                    <FaTimes
+                                        style={{
+                                            fontSize: '1.2rem',
+                                            color: 'red',
+                                            cursor: 'pointer',
+                                            marginLeft: '1rem'
+                                        }}
+                                        onClick={() => handleRemoveVehicle(index)} // Remove o veículo ao clicar
+                                    />
                                 </div>
                             </div>
                         ))}
@@ -84,6 +99,5 @@ export default function Perfil() {
                 </StyledConteudo>
             </StyledContainer>
         </Layout>
-
     );
 }

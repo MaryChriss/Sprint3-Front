@@ -4,22 +4,22 @@ import { Styledh1Cadas } from "./FormCadastro.style";
 
 interface FormCadastroProps {
     toggleForm: () => void;
-    setUserData: (data: { cpf: string; password: string }) => void;
+    setUserData: (data: { email: string; password: string }) => void;
     }
 
     const FormCadastro: React.FC<FormCadastroProps> = ({ toggleForm, setUserData }) => {
-    const [cpf, setCpf] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const isValidCPF = (cpf: string) => {
-        return /^\d{11}$/.test(cpf);
+    const isValidEmail = (email: string) => {
+        return /^\d{11}$/.test(email);
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!isValidCPF(cpf)) {
+        if (!isValidEmail(email)) {
         alert("O CPF deve conter 11 dígitos.");
         return;
         }
@@ -29,7 +29,7 @@ interface FormCadastroProps {
         return;
         }
 
-        setUserData({ cpf, password });
+        setUserData({ email, password });
         alert("Cadastro realizado com sucesso! Agora faça o login.");
         toggleForm();
     };
@@ -38,11 +38,15 @@ interface FormCadastroProps {
         <>
         <Styledh1Cadas>Cadastre-se:</Styledh1Cadas>
         <form onSubmit={handleSubmit}>
+        <Input
+            type="text"
+            placeholder="Nome Completo"
+            />
             <Input
             type="text"
-            placeholder="CPF"
-            value={cpf}
-            onChange={(e) => setCpf(e.target.value)}
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             />
             <Input
             type="password"

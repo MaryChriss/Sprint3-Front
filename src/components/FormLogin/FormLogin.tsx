@@ -5,16 +5,16 @@ import { Button, Input, InputContainer, InputIcon, Styledh1, SwitchLink } from "
 
 interface FormLoginProps {
     toggleForm: () => void;
-    handleLogin: (cpf: string, password: string) => void;
+    handleLogin: (email: string, password: string) => void;
     }
 
     const FormLogin: React.FC<FormLoginProps> = ({ toggleForm, handleLogin }) => {
-    const [cpf, setCpf] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        handleLogin(cpf, password);
+        handleLogin(email, password);
     };
 
     return (
@@ -28,9 +28,9 @@ interface FormLoginProps {
             </InputIcon>
             <Input
                 type="text"
-                placeholder="     CPF"
-                value={cpf}
-                onChange={(e) => setCpf(e.target.value)}
+                placeholder="     E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
             </InputContainer>
 

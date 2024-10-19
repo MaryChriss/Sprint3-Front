@@ -6,15 +6,15 @@ import FormCadastro from "../FormCadastro/FormCadastro";
 
 const RightSection: React.FC = () => {
     const [isLogin, setIsLogin] = useState(true);
-    const [userData, setUserData] = useState<{ cpf: string; password: string } | null>(null);
+    const [userData, setUserData] = useState<{ email: string; password: string } | null>(null);
     const navigate = useNavigate();
 
     const toggleForm = () => {
         setIsLogin(!isLogin);
     };
 
-    const handleLogin = (cpf: string, password: string) => {
-        if (userData && userData.cpf === cpf && userData.password === password) {
+    const handleLogin = (email: string, password: string) => {
+        if (userData && userData.email === email && userData.password === password) {
         navigate("/");
         } else {
         alert("CPF ou senha incorretos.");

@@ -14,7 +14,7 @@ export const StyledConteudo = styled.div`
     margin-right: 17rem;
     margin-left: 17rem;
     margin-top: 5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 10.01rem;
     flex-direction: column;
     border-radius: 4rem;
     box-shadow: 40px 30px 70px rgba(0, 0, 0, 0.20);
